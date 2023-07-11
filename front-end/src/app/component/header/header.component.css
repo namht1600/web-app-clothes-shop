@@ -1,0 +1,24 @@
+.toolbar-row-top{
+  padding: 0 10em;
+}
+
+.button-row-top{
+  background-color: rgb(251 146 60);
+}
+
+p{
+  margin: 0;
+}
+
+::ng-deep .mat-badge-content {
+  background: rgb(251 146 60) !important;
+  color: white !important
+}
+
+.button-login{
+  justify-content: flex-start;
+  padding-left: 1em;
+  font-size: 1.2em;
+  height: 3em;
+  font-weight: 350;
+}

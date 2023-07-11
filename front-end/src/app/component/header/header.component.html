@@ -1,0 +1,122 @@
+<mat-toolbar color="primary" >
+  <mat-toolbar-row class="flex justify-between toolbar-row-top min-h-[100px]">
+    <a routerLink="/home" class="text-2xl font-bold">SHOP</a>
+    <div>
+      <button mat-icon-button
+              matBadge="1"
+              class="button-row-top mr-2"
+              [matMenuTriggerFor]="cartItems"
+      >
+        <mat-icon>shopping_cart</mat-icon>
+      </button>
+
+      <mat-menu #cartItems="matMenu">
+        <div class="group/cart-action py-3 pl-2 border-b-2 flex items-center min-w-[17em]">
+          <img src="https://via.placeholder.com/150" alt="product" class="w-[60px] h-[80px] max-w-[25%]">
+          <div class="px-[1em] max-w-[75%] break-words">
+            <p>Tên sản phẩm</p>
+            <span class="text-gray-400 text-sm">{{800 | currency}}</span>
+          </div>
+
+          <div class="absolute my-auto right-[1em] bg-white flex justify-between invisible group-hover/cart-action:visible">
+            <button mat-mini-fab color="primary" class="mr-2">
+              <mat-icon>remove_shopping_cart</mat-icon>
+            </button>
+
+            <button mat-mini-fab color="primary">
+              <mat-icon>edit</mat-icon>
+            </button>
+
+          </div>
+        </div>
+
+        <div class="px-4">
+          <button mat-button
+                  class="w-full my-2 button-row-top"
+          >
+            <span class="text-white">Thanh toán</span>
+          </button>
+        </div>
+
+      </mat-menu>
+
+      <button mat-icon-button
+              matBadge="1"
+              class="button-row-top mr-2"
+              [matMenuTriggerFor]="favoriteItems"
+      >
+        <mat-icon>
+          favorite
+        </mat-icon>
+      </button>
+
+      <mat-menu #favoriteItems="matMenu">
+        <div class="py-3 pl-2 border-b-2 flex items-center min-w-[17em] group/favorite">
+          <img src="https://via.placeholder.com/150" alt="product" class="w-[60px] h-[80px] max-w-[25%]">
+          <div class="px-[1em] max-w-[75%] break-words">
+            <p>Tên sản phẩm</p>
+            <span class="text-gray-400 text-sm">{{800 | currency}}</span>
+          </div>
+
+          <div class="absolute my-auto right-[1em] bg-white flex justify-between invisible group-hover/favorite:visible">
+            <button mat-mini-fab color="primary" class="mr-2">
+              <mat-icon>remove</mat-icon>
+            </button>
+
+            <button mat-mini-fab color="primary">
+              <mat-icon>
+                add_shopping_cart
+              </mat-icon>
+            </button>
+
+          </div>
+        </div>
+
+        <div class="px-4">
+          <button mat-button
+                  class="w-full my-2 button-row-top"
+          >
+            <span class="text-white">Thêm tất cả vào giỏ</span>
+          </button>
+        </div>
+
+      </mat-menu>
+
+      <button mat-icon-button
+              class="button-row-top mr-2"
+              [matMenuTriggerFor]="info"
+              style=""
+      >
+        <mat-icon svgIcon="log-in-user" class="svgIcon">
+
+        </mat-icon>
+      </button>
+
+      <mat-menu #info="matMenu">
+        <div class="min-w-[17em] text-sm">
+          <button mat-button class="w-full button-login">
+              <mat-icon class="h-20">account_circle</mat-icon>
+              <span>Thông tin cá nhân</span>
+          </button>
+
+          <button mat-button class="w-full button-login">
+            <mat-icon>settings</mat-icon>
+            <span>Tài khoản</span>
+          </button>
+
+          <button mat-button class="w-full button-login">
+            <mat-icon>email</mat-icon>
+            <span>Tin nhắn</span>
+          </button>
+
+          <button mat-button class="w-full button-login">
+            <mat-icon>logout</mat-icon>
+            <span>Đăng xuất</span>
+          </button>
+        </div>
+      </mat-menu>
+
+    </div>
+  </mat-toolbar-row>
+
+</mat-toolbar>
