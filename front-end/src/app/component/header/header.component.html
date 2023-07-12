@@ -1,6 +1,18 @@
 <mat-toolbar color="primary" >
-  <mat-toolbar-row class="flex justify-between toolbar-row-top min-h-[100px]">
+  <mat-toolbar-row class="flex justify-between toolbar-row-top min-h-[100px] ">
     <a routerLink="/home" class="text-2xl font-bold">SHOP</a>
+    <div>
+      <form class="inline-block">
+        <mat-form-field class="w-[540px]">
+          <input matInput placeholder="Tìm kiếm" >
+          <button mat-icon-button matSuffix class=" button-search my-0" (click)="onSearch()">
+            <mat-icon>search</mat-icon>
+          </button>
+        </mat-form-field>
+      </form>
+
+
+    </div>
     <div>
       <button mat-icon-button
               matBadge="1"
@@ -118,5 +130,7 @@
 
     </div>
   </mat-toolbar-row>
-
+  <mat-toolbar-row class="flex justify-center toolbar-row-bot">
+    <app-menu></app-menu>
+  </mat-toolbar-row>
 </mat-toolbar>

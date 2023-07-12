@@ -12,11 +12,18 @@ import {MatSidenavModule} from "@angular/material/sidenav";
 import {MatMenuModule} from "@angular/material/menu";
 import {MatBadgeModule} from "@angular/material/badge";
 import {HttpClientModule} from "@angular/common/http";
+import { MenuComponent } from './component/header/menu/menu.component';
+import {MatInputModule} from "@angular/material/input";
+import { HomeComponent } from './pages/home/home.component';
+import { SliderComponent } from './pages/home/slider/slider.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HeaderComponent
+    HeaderComponent,
+    MenuComponent,
+    HomeComponent,
+    SliderComponent
   ],
   imports: [
     BrowserModule,
@@ -28,7 +35,8 @@ import {HttpClientModule} from "@angular/common/http";
     MatSidenavModule,
     MatMenuModule,
     MatBadgeModule,
-    HttpClientModule
+    HttpClientModule,
+    MatInputModule
   ],
   providers: [],
   bootstrap: [AppComponent]

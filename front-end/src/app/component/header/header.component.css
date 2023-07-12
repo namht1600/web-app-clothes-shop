@@ -2,8 +2,19 @@
   padding: 0 10em;
 }
 
+.toolbar-row-bot{
+  background-color: #283593;
+  height: 65px;
+}
+
+
 .button-row-top{
   background-color: rgb(251 146 60);
+}
+
+.button-search{
+  background-color: unset;
+  color: black;
 }
 
 p{
@@ -21,4 +32,8 @@ p{
   font-size: 1.2em;
   height: 3em;
   font-weight: 350;
+}
+
+::ng-deep.mat-mdc-form-field-subscript-wrapper{
+  display: none;
 }

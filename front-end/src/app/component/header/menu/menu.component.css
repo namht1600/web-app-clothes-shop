@@ -1,0 +1,10 @@
+
+._button{
+  height: 65px;
+  width: 180px;
+}
+
+::ng-deep.mat-mdc-menu-panel {
+  max-width: unset !important;
+}
+

@@ -1,0 +1,40 @@
+<link rel="stylesheet" href="menu.component.css">
+<button mat-button class="_button">
+  TRANG CHỦ
+</button>
+
+
+<button mat-button class="_button" [matMenuTriggerFor]="products">
+  SẢN PHẨM
+</button>
+<mat-menu #products="matMenu" >
+  <ng-template matMenuContent>
+    <button mat-menu-item [matMenuTriggerFor]="shirts">
+      Áo
+    </button>
+    <mat-menu #shirts="matMenu">
+        <button mat-menu-item>Áo thun</button>
+        <button mat-menu-item>Áo polo</button>
+        <button mat-menu-item>Áo sơ mi</button>
+    </mat-menu>
+
+    <button mat-menu-item  [matMenuTriggerFor]="trousers">
+      Quần
+    </button>
+
+    <mat-menu #trousers="matMenu">
+      <button mat-menu-item>Quần short</button>
+      <button mat-menu-item>Quần jean</button>
+      <button mat-menu-item>Quần tây</button>
+    </mat-menu>
+    <button mat-menu-item>
+      Giày
+    </button>
+  </ng-template>
+
+</mat-menu>
+
+<button mat-button class="_button">
+  LIÊN HỆ
+</button>
+

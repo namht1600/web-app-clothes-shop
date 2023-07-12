@@ -18,4 +18,8 @@ export class HeaderComponent {
       this.domSanitizer.bypassSecurityTrustResourceUrl("../../../assets/login-user.svg")
     );
   }
+
+  onSearch() {
+
+  }
 }
